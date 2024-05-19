@@ -1,0 +1,22 @@
+<h1>This is Reactive form</h1>
+<app-reactive-form></app-reactive-form>
+<app-demographic></app-demographic>
+
+<h1>This is Directive components</h1>
+<p 
+  appSample="lightgreen" 
+  defaultFontSize="18px" 
+  highlightFontSize="40px" 
+  newText="Sawasdee kubbb"
+  textcolor="blue"
+  style="font-size: 18px; color: darkcyan;">
+  mouse enter right here kub.
+</p>
+<div *appMyStructural="5">
+    <p>This paragraph will be repeated 5 times.</p>
+</div>
+
+<h1>This is Pipe components</h1>
+<div>{{ someObject | ExamplepipePipe }}</div>
+
+<router-outlet />
