@@ -1,0 +1,26 @@
+<div *ngIf="data">
+    <h2>Bitcoin Price Index (BPI)</h2>
+    <p>Time: {{ data.time.updated }}</p>
+    <div>
+        <input type="checkbox" id="showUSD" [(ngModel)]="showUSD">
+        <label for="showUSD">Show USD</label>
+      </div>
+      <div>
+        <input type="checkbox" id="showGBP" [(ngModel)]="showGBP">
+        <label for="showGBP">Show GBP</label>
+      </div>
+      <div>
+        <input type="checkbox" id="showEUR" [(ngModel)]="showEUR">
+        <label for="showEUR">Show EUR</label>
+      </div>
+      
+      <div *ngIf="showUSD">
+        <p>USD: {{ data.bpi.USD.rate }}</p>
+      </div>
+      <div *ngIf="showGBP">
+        <p>GBP: {{ data.bpi.GBP.rate }}</p>
+      </div>
+      <div *ngIf="showEUR">
+        <p>EUR: {{ data.bpi.EUR.rate }}</p>
+      </div>
+</div>
